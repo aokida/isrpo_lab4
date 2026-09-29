@@ -1,5 +1,43 @@
 import math
+import unittest
+import random
+class CircleTestCase(unittest.TestCase):
+    def test_area_zero(self):
+        res = area(0)
+        self.assertEqual(res, 0)
+       
+    def test_area_negative(self):
+        res = area(-10)
+        self.assertEqual(res, ValueError)
 
+    def test_area_big_numbers(self):
+        res = area(100000000000)
+        self.assertEqual(res, 10000000000000000000000*math.pi)
+
+    def test_area_small_numbers(self):
+        res = area(5)
+        self.assertEqual(res, 5*5*math.pi)
+        res = area(2.5)
+        self.assertEqual(res, 6.25*math.pi)
+
+    def test_perimeter_zero(self):
+        res = perimeter(0)
+        self.assertEqual(res, 0)
+
+    def test_perimeter_negative(self):
+        res = perimeter(-100)
+        self.assertEqual(res, ValueError)
+
+    def test_perimeter_big_numbers(self):
+        res = perimeter(100000000000)
+        self.assertEqual(res, 100000000000*2*math.pi)
+
+    def test_perimeter_small_numbers(self):
+        res = perimeter(5)
+        self.assertEqual(res, 10*math.pi)
+        res = perimeter(2.5)
+        self.assertEqual(res, 5*math.pi)
+    
 
 def area(r):
     '''
