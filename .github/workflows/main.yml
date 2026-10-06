@@ -6,6 +6,7 @@ jobs:
     steps:
         - name: Run unit tests
           run: |
+              cd ..
               python -m unittest rectangle
               python -m unittest circle
               python -m unittest square
