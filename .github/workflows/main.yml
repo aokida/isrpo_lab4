@@ -6,8 +6,8 @@ jobs:
     steps:
         - name: Run unit tests
           run: |
-              echo pwd
-              echo ls
+              pwd
+              ls
   windows_testing:
     runs-on: windoes-latest
     steps:
