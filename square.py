@@ -68,4 +68,3 @@ def perimeter(a):
         P (int) - perimeter of the square
     '''
     return 4 * a
-if __name__ == '__main__': unittest.main()

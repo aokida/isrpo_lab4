@@ -66,5 +66,3 @@ def perimeter(r):
         P (int) - perimeter of the circle
     '''
     return 2 * math.pi * r
-
-if __name__ == '__main__': unittest.main()
