@@ -5,19 +5,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v3
-        - name: Run unit tests
-          run: |
+        - name: Rectangle
+          run: 
             python -m unittest rectangle.py
+        - name: Circle
+          run: 
             python -m unittest circle.py
+        - name: Square
+          run: 
             python -m unittest square.py
+        - name: Triangle
+          run: 
             python -m unittest triangle.py
   windows_testing:
     runs-on: windows-latest
     steps:
         - uses: actions/checkout@v3
-        - name: Run unit tests
-          run: |
+        - name: Rectangle
+          run: 
             python -m unittest rectangle.py
+        - name: Circle
+          run: 
             python -m unittest circle.py
+        - name: Square
+          run: 
             python -m unittest square.py
+        - name: Triangle
+          run: 
             python -m unittest triangle.py
