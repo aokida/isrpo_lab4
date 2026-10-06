@@ -1,6 +1,6 @@
 import math
 import unittest
-class CircleTestCase(unittest.TestCase):
+class TestCircleCase(unittest.TestCase):
     def test_area_zero(self):
         res = area(0)
         self.assertEqual(res, 0)

@@ -1,6 +1,6 @@
 import unittest
 import random
-class RectangleTestCase(unittest.TestCase):
+class TestRectangleCase(unittest.TestCase):
     def test_area_zero(self):
         res = area(10, 0)
         self.assertEqual(res, 0)

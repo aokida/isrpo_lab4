@@ -1,5 +1,5 @@
 import unittest
-class SquareTestCase(unittest.TestCase):
+class TestSquareCase(unittest.TestCase):
     def test_area_zero(self):
         res = area(0)
         self.assertEqual(res, 0)
