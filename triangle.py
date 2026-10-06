@@ -71,3 +71,5 @@ def perimeter(a, b, c):
         P (int) - perimeter of the triangle
     '''
     return a + b + c 
+
+if __name__ == '__main__': unittest.main()

@@ -1,6 +1,5 @@
 import math
 import unittest
-import random
 class CircleTestCase(unittest.TestCase):
     def test_area_zero(self):
         res = area(0)
@@ -68,3 +67,4 @@ def perimeter(r):
     '''
     return 2 * math.pi * r
 
+if __name__ == '__main__': unittest.main()

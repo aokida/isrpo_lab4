@@ -94,3 +94,5 @@ def perimeter(a, b):
         P (int) - perimeter of the rectangle
     '''
     return 2*(a + b) 
+
+if __name__ == '__main__': unittest.main()
