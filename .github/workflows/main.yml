@@ -6,10 +6,10 @@ jobs:
     steps:
         - name: Run unit tests
           run: |
-              python -m unittest discover -s "rectangle.py"
-              python -m unittest discover -s "circle.py"
-              python -m unittest discover -s "square.py"
-              python -m unittest discover -s "triangle.py"
+              python -m unittest rectangle
+              python -m unittest circle
+              python -m unittest square
+              python -m unittest triangle
   windows_testing:
     runs-on: windoes-latest
     steps:
