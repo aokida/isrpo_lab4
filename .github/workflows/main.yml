@@ -6,10 +6,10 @@ jobs:
     steps:
         - name: Run unit tests
           run: |
-              python -m unittest ../rectangle.py
-              python -m unittest ../circle.py
-              python -m unittest ../square.py
-              python -m unittest ../triangle.py
+              python -m unittest ../../rectangle.py
+              python -m unittest ../../circle.py
+              python -m unittest ../../square.py
+              python -m unittest ../../triangle.py
   windows_testing:
     runs-on: windoes-latest
     steps:
