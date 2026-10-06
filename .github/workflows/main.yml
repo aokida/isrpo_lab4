@@ -7,10 +7,10 @@ jobs:
         - uses: actions/checkout@v3
         - name: Run unit tests
           run: |
-            python -m unittest rectangle
-            python -m unittest circle
-            python -m unittest square
-            python -m unittest triangle
+            python -m unittest rectangle.py
+            python -m unittest circle.py
+            python -m unittest square.py
+            python -m unittest triangle.py
   windows_testing:
     runs-on: windows-latest
     steps:
