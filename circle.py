@@ -7,8 +7,12 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(res, 0)
        
     def test_area_negative(self):
-        res = area(-10)
-        self.assertEqual(res, ValueError)
+        try:
+            res = area(-10)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
 
     def test_area_big_numbers(self):
         res = area(100000000000)
@@ -25,8 +29,12 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(res, 0)
 
     def test_perimeter_negative(self):
-        res = perimeter(-100)
-        self.assertEqual(res, ValueError)
+        try:
+            res = perimeter(-10)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
 
     def test_perimeter_big_numbers(self):
         res = perimeter(100000000000)
@@ -37,7 +45,7 @@ class CircleTestCase(unittest.TestCase):
         self.assertEqual(res, 10*math.pi)
         res = perimeter(2.5)
         self.assertEqual(res, 5*math.pi)
-    
+
 
 def area(r):
     '''

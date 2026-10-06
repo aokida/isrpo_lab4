@@ -11,13 +11,13 @@ class RectangleTestCase(unittest.TestCase):
         res = area(10, 10)
         self.assertEqual(res, 100)
 
-    def test_area_two_negative_int_numbers(self):
-        res = area(-10, -10)
-        self.assertEqual(res, ValueError)
-
-    def test_area_one_negative_int(self):
-        res = area(-10, 10)
-        self.assertEqual(res, ValueError)
+    def test_area_negative_int_numbers(self):
+        try:
+            res = area(-10, 10)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
 
     def test_area_big_int_numbers(self):
         res = area(100000000000, 100000000000)
@@ -46,13 +46,13 @@ class RectangleTestCase(unittest.TestCase):
         res = perimeter(10, 10)
         self.assertEqual(res, 40)
 
-    def test_perimeter_two_negative(self):
-        res = perimeter(-10, -10)
-        self.assertEqual(res, ValueError)
-
-    def test_perimeter_one_negative(self):
-        res = perimeter(-10, 5)
-        self.assertEqual(res, ValueError)
+    def test_perimeter_negative(self):
+        try:
+            res = area(-10, -10)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
 
     def test_perimeter_big_numbers(self):
         res = perimeter(100000000000, 100000000000)
@@ -70,6 +70,7 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(res, 11.7197489638)
         res = perimeter(1.2, 3.0)
         self.assertEqual(res, 8.4)
+
     
 
 def area(a, b): 

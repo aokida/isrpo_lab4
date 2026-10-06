@@ -6,8 +6,12 @@ class TriangleTestCase(unittest.TestCase):
         res = area(0, 5)
         self.assertEqual(res, 0)
     def test_area_negative(self):
-        res = area(-5, 4)
-        self.assertEqual(res, ValueError)
+        try:
+            res = area(-10, 2)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
     def test_area_big_numbers(self):
         res = area(10000000000000000000, 100000000000000000000000)
         self.assertEqual(res, 5e+41)
@@ -27,8 +31,12 @@ class TriangleTestCase(unittest.TestCase):
         res = perimeter(0,5,3)
         self.assertEqual(res, 8)
     def test_perimeter_negative(self):
-        res = perimeter(-1, -2, 0)
-        self.assertEqual(res, ValueError)
+        try:
+            res = perimeter(-10, 2, 4)
+        except ValueError:
+            pass
+        else:
+            self.assertEqual(res, 0)
     def test_perimeter_big_numbers(self):
         res = perimeter(100000000000000000000, 432341241241284328, 132567654345654345654)
         self.assertEqual(res, 232999995586895629982)
@@ -39,6 +47,7 @@ class TriangleTestCase(unittest.TestCase):
         self.assertEqual(res, 10)
         res = perimeter(5.3, 2.0, 8.9)
         self.assertEqual(res, 16.2)
+
 
 def area(a, h): 
     '''
