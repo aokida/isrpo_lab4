@@ -4,9 +4,9 @@ jobs:
   ubuntu_testing:
     runs-on: ubuntu-latest
     steps:
+        - uses: actions/checkout@v3
         - name: Run unit tests
           run: |
-              cd ..
               python -m unittest rectangle
               python -m unittest circle
               python -m unittest square
@@ -15,6 +15,7 @@ jobs:
     runs-on: windoes-latest
     steps:
         - name: Run unit tests
+        - uses: actions/checkout@v3
           run: |
               python -m unittest rectangle.py
               python -m unittest circle.py
