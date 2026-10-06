@@ -6,15 +6,19 @@ jobs:
     steps:
         - uses: actions/checkout@v3
         - name: Rectangle
+          if: success() || failure()
           run: 
             python -m unittest rectangle.py
         - name: Circle
+          if: success() || failure()
           run: 
             python -m unittest circle.py
         - name: Square
+          if: success() || failure()
           run: 
             python -m unittest square.py
         - name: Triangle
+          if: success() || failure()
           run: 
             python -m unittest triangle.py
   windows_testing:
@@ -22,14 +26,18 @@ jobs:
     steps:
         - uses: actions/checkout@v3
         - name: Rectangle
+          if: success() || failure()
           run: 
             python -m unittest rectangle.py
         - name: Circle
+          if: success() || failure()
           run: 
             python -m unittest circle.py
         - name: Square
+          if: success() || failure()
           run: 
             python -m unittest square.py
         - name: Triangle
+          if: success() || failure()
           run: 
             python -m unittest triangle.py
