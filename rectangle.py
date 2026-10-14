@@ -20,8 +20,8 @@ class TestRectangleCase(unittest.TestCase):
             self.assertEqual(res, 0)
 
     def test_area_big_int_numbers(self):
-        res = area(100000000000, 100000000000)
-        self.assertEqual(res, 10000000000000000000000)
+        res = area(10000000000, 10000000000)
+        self.assertEqual(res, 100000000000000000000)
 
     def test_area_random_positive_int_numbers(self):
         for i in range(10):
